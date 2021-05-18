@@ -19,10 +19,8 @@ namespace EnvioEmail
                 Console.WriteLine("Escreva a sua mensagem");
                 mensagem.Body = Console.ReadLine();
 
-                using (var emailManda = new EmailServico())
-                {
-                    emailManda.MandarEmail(mensagem);
-                }
+                using var emailManda = new EmailServico();
+                emailManda.MandarEmail(mensagem);
             }
         }
 
