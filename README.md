@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ***
-> :ballot_box_with_check:
+> :link:
 > Post original para este exemplo: https://samory.sistemasresponsivos.com.br/2021/05/10/email_autenticado_pelo_google/
 
 
