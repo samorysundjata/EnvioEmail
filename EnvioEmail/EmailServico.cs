@@ -62,7 +62,7 @@ namespace EnvioEmail
                 return;
             }
 
-            Console.WriteLine("Email enviado com sucesso!");
+            Console.WriteLine("Email enviado com sucesso para " + mensagem.To.ToString() + "!");
             Console.ReadKey();
         }
 

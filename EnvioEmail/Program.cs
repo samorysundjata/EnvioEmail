@@ -11,7 +11,7 @@ namespace EnvioEmail
         {
             using (var mensagem = new MailMessage())
             {
-                Console.WriteLine("Escreva o seu e-mail");
+                Console.WriteLine("Digite aqui o seu e-mail 'seuemail@provedor.com' ");
                 string remetente = Console.ReadLine();
                 mensagem.To.Add(remetente);
                 Console.WriteLine("Escreva o assunto do email");
@@ -26,14 +26,31 @@ namespace EnvioEmail
 
         private static void Main(string[] args)
         {
-            Console.WriteLine("Este é o envio de mail, se quiser mandar uma mensagem digite 'Mandar'");
+            bool showMenu = true;
+            while (showMenu)
+            {
+                showMenu = MenuPrincipal();
+            }
+        }
 
-            var chave = Console.ReadLine();
+        private static bool MenuPrincipal()
+        {
+            Console.Clear();            
+            Console.WriteLine("Este é o Envio de Email, escolha uma opção:");
+            Console.WriteLine("1) Mandar email");
+            Console.WriteLine("2) Sair");
+            Console.Write("\r\nEscolha uma opção: ");
 
-            if (chave == "Mandar")
-                EscreverMensagem();
-            else
-                Console.WriteLine("Seu comando foi incorreto, reinicie a aplicação."); 
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    EscreverMensagem();
+                    return true;
+                case "2":                    
+                    return false;
+                default:
+                    return true;
+            }
         }
 
         #endregion Private Methods
